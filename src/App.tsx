@@ -15,8 +15,8 @@ export interface IState{
 
 function App() {
   // const [student, setStudent] = useState<{age: number, name: string}[]>([])
-  const [student, setStudent] = useState<IState["people"]>([])
-  const [people, setPeople] = useState([
+  // const [student, setStudent] = useState<IState["people"]>([])
+  const [people, setPeople] = useState<IState["people"]>([
     {
       name: "Lebron James",
       url: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png",
@@ -37,10 +37,6 @@ function App() {
     }
   ]);
 
-  // student.map(person => {
-  //   person.name
-  // });
-
   const [number, setNumber] = useState<any>(5);
 
   const changeNumber = () => {
@@ -51,7 +47,7 @@ function App() {
     <div className="App">
       <h1>People Invited to my Party</h1>
       <List people={people}></List>
-      <AddToList></AddToList>
+      <AddToList people={people} setPeople={setPeople}></AddToList>
     </div>
   );
 }
