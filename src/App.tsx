@@ -13,9 +13,7 @@ export interface IState{
   }[]
 }
 
-function App() {
-  // const [student, setStudent] = useState<{age: number, name: string}[]>([])
-  // const [student, setStudent] = useState<IState["people"]>([])
+function App() {  
   const [people, setPeople] = useState<IState["people"]>([
     {
       name: "Lebron James",
